@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import authRouter from "./routes/auth.js";
+import flightRoute from "./routes/flights.js";
 
 
 const app = express();
@@ -30,6 +31,9 @@ const connectDB = async () => {
 
 
 app.use('/api', authRouter);
+app.use("/api", flightRoute);
+
+
 app.listen(port, () => {
     connectDB();
     console.log(`Server started on port ${port}`);
