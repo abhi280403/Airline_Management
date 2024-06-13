@@ -4,6 +4,10 @@ import dotenv from 'dotenv';
 import authRouter from "./routes/auth.js";
 import flightRoute from "./routes/flight.js";
 import bookingRoute from "./routes/booking.js"
+import ticketRoute from "./routes/tickets.js";
+
+
+
 
 const app = express();
 const port = 4841;
@@ -30,9 +34,11 @@ const connectDB = async () => {
   };
 
 
-app.use('/api', authRouter);
-app.use("/api", flightRoute);
-app.use("/api", bookingRoute);
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/flights", flightRoute);
+app.use("/api/v1/bookings", bookingRoute);
+app.use("/api/v1/tickets", ticketRoute);
+
 
 app.listen(port, () => {
     connectDB();
