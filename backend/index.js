@@ -10,7 +10,7 @@ import ticketRoute from "./routes/tickets.js";
 
 
 const app = express();
-const port = 4841;
+const port = 5000;
 dotenv.config();
 app.use(express.json());
 app.get('/', (req, res) => {
