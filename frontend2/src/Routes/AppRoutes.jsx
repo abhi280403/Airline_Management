@@ -20,9 +20,12 @@ import Profile from "../page/Profile";
 
 // ProtectedRoute component to handle admin-only routes
 const ProtectedRoute = ({ element: Element, ...rest }) => {
-  const isAdmin = localStorage.getItem("isAdmin") === "true";
-
+  const isAdmin = JSON.parse(localStorage.getItem("user")).isAdmin;
+  console.log(`hello world ${isAdmin}`);
+  
   return isAdmin ? <Element {...rest} /> : <Navigate to="/" replace />;
+
+  
 };
 
 const AppRoutes = () => {

@@ -25,10 +25,7 @@ const AddAirline = () => {
       toast.error("Please enter the airline name.");
       return;
     }
-    if (!image) {
-      toast.error("Please upload an image.");
-      return;
-    }
+  
 
     try {
       // Upload image to Cloudinary
@@ -42,7 +39,7 @@ const AddAirline = () => {
 
       // Send data to backend API
       const response = await axios.post(
-        "http://localhost:5000/api/v1/flights/addAirline",
+        "http://localhost:4000/api/v1/flights/addAirline",
         airlineData
       );
 

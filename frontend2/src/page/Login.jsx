@@ -52,14 +52,14 @@ const Login = () => {
       });
 
       const data = await response.json();
+      console.log(`hello world ${data.data.isAdmin}`);
 
       if (!response.ok) {
         toast.error(data.error);
         return;
       }
 
-      console.log(data);
-
+      
       console.log(response.ok);
 
       if (response.ok) {

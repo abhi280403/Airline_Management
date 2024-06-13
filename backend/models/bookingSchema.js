@@ -46,7 +46,7 @@ const bookingSchema = new Schema({
   },
   passportSizePhoto: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
