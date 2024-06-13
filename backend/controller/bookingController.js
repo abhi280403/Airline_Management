@@ -59,11 +59,15 @@ export const getCheckoutSession = async (req, res) => {
     flight.bookedSeats.push(...selectedSeats); // Update bookedSeats array
     await flight.save();
 
-    // Return the ticket information directly instead of creating a Stripe session
+    // Construct the success URL
+    const successUrl = `${process.env.CLIENT_SITE_URL}ticket/${bookingUID}`;
+
+    // Return the ticket information and success URL
     res.status(200).json({
       success: true,
       message: "Booking successful, ticket generated",
       ticket,
+      successUrl,
     });
   } catch (error) {
     console.error("Error:", error);

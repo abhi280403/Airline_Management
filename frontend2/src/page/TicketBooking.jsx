@@ -81,7 +81,13 @@ const TicketBooking = () => {
       const data = await response.json();
       console.log(data);
 
-      window.location.href = data.session.url;
+      if (data.success) {
+        // Redirect the user to the success URL provided by the backend
+        window.location.href = data.successUrl;
+      } else {
+        // Handle the case where the booking process was not successful
+        console.error('Booking process failed:', data.message);
+      }
     } catch (error) {
       console.error("Error:", error);
     }
