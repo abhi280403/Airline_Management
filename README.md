@@ -1,6 +1,15 @@
 # Airline_Management
 
 
+## Project team
+- [@abhi280403](https://github.com/abhi280403)
+- [@Rakshith1206](https://github.com/Rakshith1206)
+- [@rohithreddy29](https://github.com/rohithreddy29)
+- [@abhipranav16](https://github.com/abhipranav16)
+
+  
+
+
 Ensure you have the following installed on your machine:
 - Node.js (v14 or higher)
 - npm (v6 or higher)
