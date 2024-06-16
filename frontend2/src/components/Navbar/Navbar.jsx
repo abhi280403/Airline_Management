@@ -28,7 +28,7 @@ function Navbar() {
     <header className="bg-white px-[30px] md:px-[30px]">
       <nav className="flex justify-between items-center w-full max-w-[1800px] mx-auto mt-5 z-[10]">
         <Link to={"/"}>
-          <div className="font-bold text-3xl">ABVS</div>
+          <div className="font-bold text-3xl">Flights</div>
         </Link>
         <div
           className={`nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 ${
