@@ -7,8 +7,6 @@
 - [@rohithreddy29](https://github.com/rohithreddy29)
 - [@abhipranav16](https://github.com/abhipranav16)
 
-  
-
 
 Ensure you have the following installed on your machine:
 - Node.js (v14 or higher)
