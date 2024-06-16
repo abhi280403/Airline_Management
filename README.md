@@ -31,12 +31,4 @@ Ensure you have the following installed on your machine:
 
 3. **Start the Frontend Server:**
    ```bash
-   npm run dev
-
-
-
-
-
-
-
-   
+   npm run dev   
