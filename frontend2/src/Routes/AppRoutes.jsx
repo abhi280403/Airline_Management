@@ -24,8 +24,6 @@ const ProtectedRoute = ({ element: Element, ...rest }) => {
   console.log(`hello world ${isAdmin}`);
   
   return isAdmin ? <Element {...rest} /> : <Navigate to="/" replace />;
-
-  
 };
 
 const AppRoutes = () => {
