@@ -12,7 +12,6 @@ const corsOptions = {
   origin: true,
 };
 
-
 const app = express();
 const port = 4000;
 dotenv.config();
@@ -27,8 +26,6 @@ const password = encodeURIComponent('Abhijith@12345');
 
 // Correct MongoDB connection string format
 const uri = `mongodb+srv://abhijithgoud757:${password}@airline.hjeq4bt.mongodb.net/?retryWrites=true&w=majority&appName=Airline`;
-
-
 const connectDB = async () => {
     try {
       await mongoose.connect(uri);
